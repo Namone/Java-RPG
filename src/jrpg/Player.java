@@ -8,9 +8,11 @@ public class Player {
     // Player health and player stamin
     private int playerHealth = 100;
     private int playerStamina = 25;
+    // Player position on X - Y coordinate 
+    private int playerPositionX, playerPositionY;
     
     
-    public void Player(String textureLocation, String name) {
+    public void Player(String textureLocation, String name, int positionX, int positionY) {
         
         playerName = name;
         playerTexture = textureLocation;
