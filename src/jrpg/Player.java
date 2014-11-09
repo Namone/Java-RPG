@@ -5,7 +5,7 @@ public class Player {
     String playerTexture; // Texture object to hold player
     String playerName;   // Name of player (input by user)
     
-    // Player health and player stamin
+    // Player health and player stamina
     private int playerHealth = 100;
     private int playerStamina = 25;
     // Player position on X - Y coordinate 
