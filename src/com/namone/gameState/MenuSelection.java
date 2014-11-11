@@ -7,7 +7,7 @@ public class MenuSelection {
 	
 	public MenuSelection(){}
 	
-//	listen for a mouse click and returns true if the mouse click is inside the given area
+//	listen for a mouse click and returns true if the mouse click is inside the given area passed to clickAnalyzer
 	public boolean mouseClickListener(){
 		while(Mouse.next()){
 			if(Mouse.isButtonDown(0)){
@@ -24,7 +24,7 @@ public class MenuSelection {
 	}
 	
 //	checks to see if the mouse click is inside of the speific area
-//	return true if the mouse click is in
+//	return true if the mouse click is inside area, returns false if it is not
 //	
 //	@param lX = left X, rX = right X, bY = bottom Y, tY = Top Y; all of the target area
 	public boolean clickAnalyzer(double lX, double rX, double bY, double tY, double mouseX, double mouseY){	
