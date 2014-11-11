@@ -24,8 +24,8 @@ public class TitleScreen extends GameState{
 	}
 	
 	public void init(){
-		font = new Font("Times New Roman", Font.BOLD, 500);
-		uniFont = new UnicodeFont(font);
+		/*font = new Font("Times New Roman", Font.BOLD, 30);
+		uniFont = new UnicodeFont(font, 24, false, false);
 		uniFont.getEffects().add(new ColorEffect());
 		uniFont.addAsciiGlyphs();
 		try {
@@ -33,7 +33,7 @@ public class TitleScreen extends GameState{
 		} catch (SlickException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}	*/
 	}
 	
 	public void update(){
@@ -41,11 +41,19 @@ public class TitleScreen extends GameState{
 	}
 	
 	public void draw(Graphics g, Graphics graphics){
-		graphics.setBackground(Color.white);
-		//ttFont.drawString(100, 50, "TEST TITLE", Color.black);
-		graphics.setFont(uniFont);
-		graphics.setColor(Color.black);
-		g.drawString(title, Display.getWidth() / 2, Display.getHeight() / 2);
+		
+		glClearColor(50, 50, 50, 1);
+		
+		glColor3f(1f, 0.5f, 0.5f);
+		glBegin(GL_QUADS);
+		{
+			glVertex2f(Display.getWidth() / 2, Display.getHeight() / 2);
+			glVertex2f(Display.getWidth() / 2 + 300, Display.getHeight() / 2);
+			glVertex2f(Display.getWidth() / 2 + 300, Display.getHeight() / 2 + 50);
+			glVertex2f(Display.getWidth() / 2, Display.getHeight() / 2 + 50);
+			
+		}
+		glEnd();
 	}
 	
 }
