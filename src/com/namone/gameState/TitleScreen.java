@@ -21,9 +21,9 @@ public class TitleScreen extends GameState{
 	UnicodeFont uniFont;
 	String title = "TITLE IN PROGRESS";
 	
-	public TitleScreen(){
-		
-	}
+	MenuSelection menuSel = new MenuSelection();
+	
+	public TitleScreen(){}
 	
 	public void init(){
 //		font = new Font("Times New Roman", Font.BOLD, 30);
@@ -56,6 +56,9 @@ public class TitleScreen extends GameState{
 			
 		}
 		glEnd();
+		if(menuSel.mouseClickListener()){
+//			TODO add code to execute after mouse click
+		}
 	}
 	
 }

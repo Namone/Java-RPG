@@ -5,9 +5,7 @@ import org.newdawn.slick.Graphics;
 
 public class MenuState extends GameState{
 	
-	public MenuState(){
-		
-	}
+	public MenuState(){}
 	
 	public void init(){
 
