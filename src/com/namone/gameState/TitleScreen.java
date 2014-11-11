@@ -20,7 +20,6 @@ public class TitleScreen extends GameState{
 	TrueTypeFont ttFont;
 	UnicodeFont uniFont;
 	String title = "TITLE IN PROGRESS";
-	
 	MenuSelection menuSel = new MenuSelection();
 	
 	public TitleScreen(){}
@@ -58,7 +57,7 @@ public class TitleScreen extends GameState{
 		glEnd();
 		if(menuSel.mouseClickListener()){
 //			TODO add code to execute after mouse click
-			glClearColor(100, 0, 50, 1);  // check to see if methods work.  CAN REMOVE AFTER TESTING
+			glClearColor(0, 0, 25, 1);  // check to see if methods work.  CAN REMOVE AFTER TESTING
 		}
 	}
 	
