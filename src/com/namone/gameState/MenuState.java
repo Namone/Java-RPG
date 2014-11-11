@@ -3,13 +3,12 @@ package com.namone.gameState;
 import java.awt.Font;
 
 import org.newdawn.slick.Color;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.TrueTypeFont;
 
 import static org.lwjgl.opengl.GL11.*; 
 
 public class MenuState extends GameState{
-	
-
 	
 	public MenuState(){
 		
@@ -23,10 +22,10 @@ public class MenuState extends GameState{
 		
 	}
 	
-	public void draw(){
-		glClearColor(10, 50, 50, 1);
-		
-
+	public void draw(Graphics g, Graphics graphics){
+		graphics.setBackground(Color.white);
+		g.setColor(Color.black);
+		g.drawString("TITLE", 50, 50);
 	}
 	
 }

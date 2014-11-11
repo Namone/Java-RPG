@@ -2,9 +2,13 @@ package com.namone.gameState;
 
 import java.util.ArrayList;
 
+import org.newdawn.slick.Graphics;
+
 public class GameStateManager {
 	
 	private ArrayList<GameState> gameStates = new ArrayList<GameState>();
+	
+	Graphics g = new Graphics();
 	
 	private int currentState;
 	
@@ -26,8 +30,8 @@ public class GameStateManager {
 		gameStates.get(currentState).update();
 	}
 	// Draw selected game state
-	public void draw(){
-		gameStates.get(currentState).draw();
+	public void draw(Graphics g, Graphics graphics){
+		gameStates.get(currentState).draw(g, graphics);
 	}
 	
 	public int getCurrent(){

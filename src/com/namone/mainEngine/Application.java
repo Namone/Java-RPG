@@ -5,6 +5,7 @@ import org.lwjgl.LWJGLException;
 import static org.lwjgl.opengl.GL11.*;
 
 import org.lwjgl.opengl.*;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
 import com.namone.gameState.GameStateManager;
@@ -13,6 +14,8 @@ public class Application {
 	
 	boolean isRunning = false;	
 	GameStateManager gsm = new GameStateManager();
+	Graphics g; // New graphics context
+	Graphics graphics;
 
 	public Application(){
 		run();
@@ -30,7 +33,7 @@ public class Application {
 			//Update the screen
 			update();
 			// Render the screen
-			render();
+			render(g, graphics);
 			// Update the screen
 			Display.update();
 			Display.sync(60);
@@ -49,6 +52,9 @@ public class Application {
 			e.printStackTrace();
 		}
 		
+		g = new Graphics(800, 600); // New Graphic context
+		graphics = new Graphics();
+		
 		initGL();
 		gameLoop();		
 	}
@@ -65,9 +71,9 @@ public class Application {
 		gsm.update();
 	}	
 	// Render the game (Draw)
-	public void render(){
+	public void render(Graphics g, Graphics graphics){
 		// TODO: Drawing code goes here
-		gsm.draw();
+		gsm.draw(g, graphics);
 	}
 	
 }
