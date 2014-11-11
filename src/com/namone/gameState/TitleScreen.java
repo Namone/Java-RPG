@@ -58,7 +58,7 @@ public class TitleScreen extends GameState{
 		glEnd();
 		if(menuSel.mouseClickListener()){
 //			TODO add code to execute after mouse click
-			glClearColor(0, 0, 50, 1);  // check to see if methods work.  CAN REMOVE AFTER TESTING
+			glClearColor(100, 0, 50, 1);  // check to see if methods work.  CAN REMOVE AFTER TESTING
 		}
 	}
 	
