@@ -1,12 +1,7 @@
 package com.namone.gameState;
 
-import java.awt.Font;
-
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.TrueTypeFont;
-
-import static org.lwjgl.opengl.GL11.*; 
 
 public class MenuState extends GameState{
 	

@@ -1,11 +1,16 @@
 package com.namone.mainEngine;
 
+import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
+import static org.lwjgl.opengl.GL11.GL_MODELVIEW;
+import static org.lwjgl.opengl.GL11.GL_PROJECTION;
+import static org.lwjgl.opengl.GL11.glClear;
+import static org.lwjgl.opengl.GL11.glLoadIdentity;
+import static org.lwjgl.opengl.GL11.glMatrixMode;
+import static org.lwjgl.opengl.GL11.glOrtho;
+
 import org.lwjgl.LWJGLException;
-
-import static org.lwjgl.opengl.GL11.*;
-
-import org.lwjgl.opengl.*;
-import org.newdawn.slick.Color;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
 import org.newdawn.slick.Graphics;
 
 import com.namone.gameState.GameStateManager;

@@ -1,16 +1,18 @@
 package com.namone.gameState;
 
+import static org.lwjgl.opengl.GL11.GL_QUADS;
+import static org.lwjgl.opengl.GL11.glBegin;
+import static org.lwjgl.opengl.GL11.glClearColor;
+import static org.lwjgl.opengl.GL11.glColor3f;
+import static org.lwjgl.opengl.GL11.glEnd;
+import static org.lwjgl.opengl.GL11.glVertex2f;
+
 import java.awt.Font;
 
 import org.lwjgl.opengl.Display;
-import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.UnicodeFont;
-import org.newdawn.slick.font.effects.ColorEffect;
-
-import static org.lwjgl.opengl.GL11.*; 
 
 public class TitleScreen extends GameState{
 	
@@ -24,16 +26,16 @@ public class TitleScreen extends GameState{
 	}
 	
 	public void init(){
-		/*font = new Font("Times New Roman", Font.BOLD, 30);
-		uniFont = new UnicodeFont(font, 24, false, false);
-		uniFont.getEffects().add(new ColorEffect());
-		uniFont.addAsciiGlyphs();
-		try {
-			uniFont.loadGlyphs();
-		} catch (SlickException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	*/
+//		font = new Font("Times New Roman", Font.BOLD, 30);
+//		uniFont = new UnicodeFont(font, 24, false, false);
+//		uniFont.getEffects().add(new ColorEffect());
+//		uniFont.addAsciiGlyphs();
+//		try {
+//			uniFont.loadGlyphs();
+//		} catch (SlickException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}	
 	}
 	
 	public void update(){
