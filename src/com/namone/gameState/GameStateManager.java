@@ -19,7 +19,7 @@ public class GameStateManager {
 	public GameStateManager(){
 		currentState = MENU_STATE;
 		
-		gameStates.add(new MenuState()); // MenuState added at index 0 (position 1)
+		gameStates.add(new TitleScreen()); // MenuState added at index 0 (position 1)
 	}
 	// Initialize selected game state
 	public void init(){
