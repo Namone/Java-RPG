@@ -1,10 +1,6 @@
 package com.namone.mainEngine;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL11.glClear;
-import static org.lwjgl.opengl.GL11.glLoadIdentity;
-import static org.lwjgl.opengl.GL11.glMatrixMode;
-import static org.lwjgl.opengl.GL11.glOrtho;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
@@ -12,7 +8,6 @@ import org.lwjgl.opengl.DisplayMode;
 import org.newdawn.slick.Graphics;
 
 import com.namone.gameState.GameStateManager;
-import com.namone.player.Player;
 
 public class Application {
 	
@@ -20,7 +15,6 @@ public class Application {
 	GameStateManager gsm = new GameStateManager();
 	Graphics g; // New graphics context
 	Graphics graphics;
-	Player player;
 
 	public Application(){
 		run();
@@ -65,7 +59,7 @@ public class Application {
 	}	
 	// Initialize OpenGL
 	public void initGL(){
-		glEnable(GL_TEXTURE_2D);
+		glEnable(GL_TEXTURE_2D); // Enables texture drawing
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		glOrtho(0, 800, 0, 600, -1, 1);		

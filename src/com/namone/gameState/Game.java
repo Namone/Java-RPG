@@ -1,6 +1,5 @@
 package com.namone.gameState;
 
-import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 import static org.lwjgl.opengl.GL11.*;
 
@@ -10,13 +9,12 @@ public class Game extends GameState{
 	
 	Player player;
 	// Creates the actual game (beyond the menu)
-	public void Game(GameStateManager gsm){
+	public Game(){
 		init();
 	}
 	// Initialize the world and player
 	public void init() {		
-		player = new Player("Tom", 60, 60); // Create player - Temporary arguments for player
-		player.loadPlayerTexture("res/testsprite.png"); // Load player texture
+		player = new Player("Tom", 60, 60); // Create player - Temporary arguments for player		
 	}	
 	// Update the player & the world
 	public void update() {		
@@ -26,6 +24,7 @@ public class Game extends GameState{
 	public void draw(Graphics g, Graphics graphics) {
 		glClearColor(0, 50, 0, 1);
 		// Draw the player to the screen (60, 60)
+		player.loadPlayerTexture("res/testsprite.png"); // Load player texture
 		player.draw();
 		
 	}

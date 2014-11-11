@@ -40,7 +40,7 @@ public class TitleScreen extends GameState{
 	public void update(){
 		
 	}
-	
+	// Draw button
 	public void draw(Graphics g, Graphics graphics){
 		
 		glClearColor(50, 50, 50, 1);
@@ -58,6 +58,8 @@ public class TitleScreen extends GameState{
 		if(menuSel.mouseClickListener()){
 //			TODO add code to execute after mouse click
 			glClearColor(0, 0, 25, 1);  // check to see if methods work.  CAN REMOVE AFTER TESTING
+			gsm.setCurrent(1); // After click, set current state to 1 (GAME_STATE)
+			
 		}
 	}
 	
