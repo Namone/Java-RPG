@@ -14,12 +14,13 @@ public class Player {
 	private int playerStamina = 25;
 	private int playerStrength = 10;
 	private String playerName; // Input by user on player creation
-	public Vector2f playerPosition; // Player position
+	//public Vector2f playerPosition; // Player position
+	public float x = 50, y = 50; // Player position
 	public Texture playerTexture; // Player texture
 	// Create player
 	public Player(String pName, int playerX, int playerY){
 		playerName = pName; // Name of player (Temporary name is Tom)
-		playerPosition = new Vector2f(playerX, playerY); // Place player at random location
+		//playerPosition = new Vector2f(playerX, playerY); // Place player at random location
 		// Tell us the player is created
 		System.out.println("Player Created!"); // Player is created when you add it to the ArrayList<>() in 
 		// GameStateManager
@@ -44,14 +45,14 @@ public class Player {
 		
 		glBegin(GL_QUADS);
 		{
-			glTexCoord2f(0,1); // Give orientation to the texture placed on object
-			glVertex2f(100,100); // Object coordinates
+			glTexCoord2f(0, 1); // Give orientation to the texture placed on object
+			glVertex2f(x,y); // Object coordinates
 			glTexCoord2f(1, 1);
-			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100);
-			glTexCoord2f(0, 0);
-			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100 + playerTexture.getTextureHeight() / 2);
+			glVertex2f(x + playerTexture.getTextureWidth() / 2, y);
 			glTexCoord2f(1, 0);
-			glVertex2f(100, 100 + playerTexture.getTextureHeight() / 2);
+			glVertex2f(x + playerTexture.getTextureWidth() / 2, y + playerTexture.getTextureHeight() / 2);
+			glTexCoord2f(0, 0);
+			glVertex2f(x, y + playerTexture.getTextureHeight() / 2);
 		}
 		glEnd(); 
 	}
@@ -59,5 +60,19 @@ public class Player {
 	public void update(){
 		
 	}
+	
+	public float getPlayerX(){
+		return x;
+	}
+	
+	public float getPlayerY(){
+		return y;
+	}
+	
+	public void setPlayerCoor(float x, float y){
+		x = x;
+		y = y;
+	}
+
 
 }

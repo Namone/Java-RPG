@@ -68,7 +68,7 @@ public class Application {
 	// Update code
 	public void update(){
 		//TODO: Update code goes here
-		gsm.update();
+		gsm.update(); // -----> Updates current game state; whether it's the Menu or Game
 	}	
 	// Render the game (Draw)
 	public void render(Graphics g, Graphics graphics, GameStateManager gsm){

@@ -40,7 +40,7 @@ public class GameStateManager {
 	}
 	// Update selected game state
 	public void update(){
-		gameStates.get(currentState).update();
+		gameStates.get(currentState).update(); // -----> Updates selected game state
 	}
 	// Draw selected game state
 	public void draw(Graphics g, Graphics graphics, GameStateManager gsm){

@@ -14,13 +14,15 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.UnicodeFont;
 
+import com.namone.input.InputListener;
+
 public class TitleScreen extends GameState{
 	
 	Font font;
 	TrueTypeFont ttFont;
 	UnicodeFont uniFont;
 	String title = "TITLE IN PROGRESS";
-	MenuSelection menuSel = new MenuSelection();
+	InputListener menuSel = new InputListener();
 	
 	public TitleScreen(){}
 	
