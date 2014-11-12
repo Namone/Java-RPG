@@ -44,13 +44,13 @@ public class Player {
 		
 		glBegin(GL_QUADS);
 		{
-			glTexCoord2f(0,0); // Give orientation to the texture placed on object
+			glTexCoord2f(0,1); // Give orientation to the texture placed on object
 			glVertex2f(100,100); // Object coordinates
-			glTexCoord2f(1, 0);
-			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100);
 			glTexCoord2f(1, 1);
+			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100);
+			glTexCoord2f(0, 0);
 			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100 + playerTexture.getTextureHeight() / 2);
-			glTexCoord2f(0, 1);
+			glTexCoord2f(1, 0);
 			glVertex2f(100, 100 + playerTexture.getTextureHeight() / 2);
 		}
 		glEnd(); 
