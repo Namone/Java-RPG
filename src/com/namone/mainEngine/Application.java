@@ -49,7 +49,7 @@ public class Application {
 			//Update the screen
 			update();
 			// Render the screen
-			render(g, graphics);
+			render(g, graphics, gsm);
 			// Update the screen
 			Display.update();
 			Display.sync(60);
@@ -59,7 +59,7 @@ public class Application {
 	}	
 	// Initialize OpenGL
 	public void initGL(){
-		glEnable(GL_TEXTURE_2D); // Enables texture drawing
+		glEnable(GL_TEXTURE_2D); // Enables texture drawing !IMPORTANT!
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		glOrtho(0, 800, 0, 600, -1, 1);		
@@ -71,9 +71,9 @@ public class Application {
 		gsm.update();
 	}	
 	// Render the game (Draw)
-	public void render(Graphics g, Graphics graphics){
+	public void render(Graphics g, Graphics graphics, GameStateManager gsm){
 		// TODO: Drawing code goes here
-		gsm.draw(g, graphics);
+		gsm.draw(g, graphics, gsm);
 	}
 	
 }

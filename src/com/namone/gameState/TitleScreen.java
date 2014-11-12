@@ -41,7 +41,7 @@ public class TitleScreen extends GameState{
 		
 	}
 	// Draw button
-	public void draw(Graphics g, Graphics graphics){
+	public void draw(Graphics g, Graphics graphics, GameStateManager gsm){
 		
 		glClearColor(50, 50, 50, 1);
 		

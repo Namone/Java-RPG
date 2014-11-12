@@ -21,7 +21,7 @@ public class Game extends GameState{
 		//TODO: PLAYER MOVMENT
 	}	
 	// Draw the player & the world
-	public void draw(Graphics g, Graphics graphics) {
+	public void draw(Graphics g, Graphics graphics, GameStateManager gsm) {
 		glClearColor(0, 50, 0, 1);
 		// Draw the player to the screen (60, 60)
 		player.loadPlayerTexture("res/testsprite.png"); // Load player texture

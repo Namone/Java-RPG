@@ -15,7 +15,7 @@ public class MenuState extends GameState{
 		
 	}
 	
-	public void draw(Graphics g, Graphics graphics){
+	public void draw(Graphics g, Graphics graphics, GameStateManager gsm){
 		graphics.setBackground(Color.white);
 		g.setColor(Color.black);
 		g.drawString("TITLE", 50, 50);

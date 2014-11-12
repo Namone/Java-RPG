@@ -43,8 +43,8 @@ public class GameStateManager {
 		gameStates.get(currentState).update();
 	}
 	// Draw selected game state
-	public void draw(Graphics g, Graphics graphics){
-		gameStates.get(currentState).draw(g, graphics);
+	public void draw(Graphics g, Graphics graphics, GameStateManager gsm){
+		gameStates.get(currentState).draw(g, graphics, gsm);
 	}
 	// Get current game state
 	public int getCurrent(){
