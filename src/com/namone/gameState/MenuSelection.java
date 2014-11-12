@@ -29,12 +29,16 @@ public class MenuSelection {
 	public void keyboardClickListener(Player player){
 		while(Keyboard.next()){
 			if(Keyboard.isKeyDown(Keyboard.KEY_W) || Keyboard.isKeyDown(Keyboard.KEY_UP)){            // Moves UP
+				player.setPlayerCoor(player.getPlayerX(), player.getPlayerY() + 10);
 				player.draw(player.getPlayerX(), player.getPlayerY() + 10);
 			} else if(Keyboard.isKeyDown(Keyboard.KEY_A) || Keyboard.isKeyDown(Keyboard.KEY_LEFT)){   // Moves Left
+				player.setPlayerCoor(player.getPlayerX() - 10, player.getPlayerY());
 				player.draw(player.getPlayerX() - 10, player.getPlayerY());
 			} else if(Keyboard.isKeyDown(Keyboard.KEY_S) || Keyboard.isKeyDown(Keyboard.KEY_DOWN)){   // Moves Down
+				player.setPlayerCoor(player.getPlayerX(), player.getPlayerY() - 10);
 				player.draw(player.getPlayerX(), player.getPlayerY() - 10);
 			} else if(Keyboard.isKeyDown(Keyboard.KEY_D) || Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){  // Moves Right 
+				player.setPlayerCoor(player.getPlayerX() + 10, player.getPlayerY());
 				player.draw(player.getPlayerX() + 10, player.getPlayerY());
 			} 
 		}
