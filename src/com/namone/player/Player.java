@@ -38,20 +38,20 @@ public class Player {
 		}
 	}
 	// Draw the player
-	public void draw(){		
+	public void draw(float x, float y){		//accepts x y coors
 		Color.white.bind(); // Make the color of it white (transparent)
 		playerTexture.bind(); // Bind texture to object
 		
 		glBegin(GL_QUADS);
 		{
 			glTexCoord2f(0,1); // Give orientation to the texture placed on object
-			glVertex2f(100,100); // Object coordinates
+			glVertex2f(x,y); // Object coordinates
 			glTexCoord2f(1, 1);
-			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100);
+			glVertex2f(x + playerTexture.getTextureWidth() / 2, y);
 			glTexCoord2f(0, 0);
-			glVertex2f(100 + playerTexture.getTextureWidth() / 2, 100 + playerTexture.getTextureHeight() / 2);
+			glVertex2f(x + playerTexture.getTextureWidth() / 2, y + playerTexture.getTextureHeight() / 2);
 			glTexCoord2f(1, 0);
-			glVertex2f(100, 100 + playerTexture.getTextureHeight() / 2);
+			glVertex2f(x, y + playerTexture.getTextureHeight() / 2);
 		}
 		glEnd(); 
 	}
@@ -59,5 +59,18 @@ public class Player {
 	public void update(){
 		
 	}
+	
+	public float getPlayerX(){
+		return playerPosition.getX();
+	}
+	
+	public float getPlayerY(){
+		return playerPosition.getY();
+	}
+	
+	public void setPlayerCoor(float x, float y){
+		playerPosition.set(x, y);
+	}
+
 
 }

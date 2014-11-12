@@ -8,6 +8,8 @@ import com.namone.player.Player;
 public class Game extends GameState{
 	
 	Player player;
+	MenuSelection menuSel = new MenuSelection();
+	boolean update = false;
 	// Creates the actual game (beyond the menu)
 	public Game(){
 		init();
@@ -18,15 +20,17 @@ public class Game extends GameState{
 	}	
 	// Update the player & the world
 	public void update() {		
-		//TODO: PLAYER MOVMENT
+			menuSel.keyboardClickListener(player);        // uses keyboard input to move player and will enventully handle inputs of all kind? 
+		
 	}	
 	// Draw the player & the world
 	public void draw(Graphics g, Graphics graphics, GameStateManager gsm) {
 		glClearColor(0, 50, 0, 1);
 		// Draw the player to the screen (60, 60)
 		player.loadPlayerTexture("res/testsprite.png"); // Load player texture
-		player.draw();
-		
+		player.draw(100, 100);
+		update = true;
+		//update();
 	}
 
 }
